@@ -29,13 +29,26 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+#Apps from Django
+DEFAULT_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+)
+
+#Apps installed via pip, etc
+THIRD_PARTY_APPS = (
+
+)
+
+#Apps developed
+LOCAL_APPS = (
+
 )
 
 MIDDLEWARE_CLASSES = (
