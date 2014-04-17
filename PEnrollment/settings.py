@@ -27,10 +27,6 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
-INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
-
 #Apps from Django
 DEFAULT_APPS = (
     'django.contrib.admin',
@@ -59,6 +55,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+# Application definition
+
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
 
 ROOT_URLCONF = 'PEnrollment.urls'
 
