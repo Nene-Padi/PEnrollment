@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Register
+{% endblock %}
+
+{% block content %}
+	<h1 class="H-1">Register</h1>
+	<form action="/accounts/register/" method="post">
+		{% csrf_token %}
+		<table>
+			{{ form.as_table }}
+		</table>
+
+		<input type="submit" value="Register" />
+	</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+		Login
+{% endblock %}
+
+{% block content %}
+	<h1 class="H-1">Login</h1>
+	{% if form.errors %}
+		<p class="error">Please enter valid login details or register if you're new</p>
+	{% endif %}
+
+	<form action="/accounts/auth/" method="post">
+	{% csrf_token %}
+		<label for="username">User name:</label>
+		<input type="text" name="username" id="username" /> 
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" /> 
+
+		<input type="submit" value="Login" />
+		
+	</form>
+	<a style="text-align: right;" href="{% url 'register_user' %}">Create an account</a>
+
+{% endblock %}

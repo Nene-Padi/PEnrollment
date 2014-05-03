@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title %} 
+
+		{% endblock %}
+	</title>
+</head>
+<body>
+
+{% block header %}
+	
+		{% if user.is_authenticated %}
+		<a href="/home">Home</a> |
+		<a href="">My Application</a>
+		{% endif %}
+
+{% endblock %}
+
+	{% if user.is_authenticated %}
+	<p style="text-align: right;">Hi <b>{{ user.username }}</b>! <a href="/accounts/logout/">Log Out</a> <br /> {{ user.get_full_name }}</p>
+	{% endif %}
+{% block head %}
+	
+{% endblock head %}
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

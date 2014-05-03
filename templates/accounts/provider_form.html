@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Information About Individual Signing This Application
+{% endblock %}
+
+{% block content %}
+	<h1 class="H-1">Information About Individual Signing This Application</h1>
+	<form action="/accounts/provider/" method="post">
+		{% csrf_token %}
+		<table>
+			{{ form.as_table }}
+		</table>
+
+		<input type="submit" value="Save" />
+	</form>
+{% endblock %}
